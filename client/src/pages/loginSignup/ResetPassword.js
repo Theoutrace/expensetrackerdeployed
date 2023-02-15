@@ -22,7 +22,7 @@ const ResetPassword = () => {
     if (newPassword === reenterPassword) {
       const resetPasswordObj = { newPassword: newPassword };
 
-      const resetApi = `http://localhost:3001/password/resetpassword/${id}`;
+      const resetApi = `http://35.78.181.44:3001/password/resetpassword/${id}`;
 
       const response = await fetch(resetApi, {
         method: "POST",

@@ -24,7 +24,7 @@ const Signup = (props) => {
     };
 
     (async function postFun() {
-      const response = await fetch(`http://localhost:3001/user/signup`, {
+      const response = await fetch(`http://35.78.181.44:3001/user/signup`, {
         method: "POST",
         body: JSON.stringify({
           name: Obj.name,

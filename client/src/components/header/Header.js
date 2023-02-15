@@ -24,13 +24,16 @@ const Header = () => {
   const buyPremiumHandler = async () => {
     const token = localStorage.getItem("token");
     try {
-      const response = await fetch(`http://localhost:3001/payment/buypremium`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: token,
-        },
-      });
+      const response = await fetch(
+        `http://35.78.181.44:3001/payment/buypremium`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: token,
+          },
+        }
+      );
       if (response.ok) {
         const data = await response.json();
         var options = {
@@ -40,7 +43,7 @@ const Header = () => {
           order_id: data.order.id,
           handler: async function (response) {
             const res = await fetch(
-              `http://localhost:3001/payment/update-transaction-status`,
+              `http://35.78.181.44:3001/payment/update-transaction-status`,
               {
                 method: "POST",
                 body: JSON.stringify({
@@ -78,7 +81,7 @@ const Header = () => {
         const razorpay = new window.Razorpay(options);
         razorpay.on("payment.failed", async function (res) {
           await fetch(
-            `http://localhost:3001/payment/update-transaction-status/failed`,
+            `http://35.78.181.44:3001/payment/update-transaction-status/failed`,
             {
               method: "POST",
               body: JSON.stringify({

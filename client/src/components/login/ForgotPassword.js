@@ -16,7 +16,7 @@ const ForgotPassword = (props) => {
     e.preventDefault();
 
     const response = await fetch(
-      `http://localhost:3001/password/forgotpassword`,
+      `http://35.78.181.44:3001/password/forgotpassword`,
       {
         method: "POST",
         body: JSON.stringify({ email: emailInputRef.current.value }),

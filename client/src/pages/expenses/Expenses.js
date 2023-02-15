@@ -34,7 +34,7 @@ const Expenses = () => {
   // request
   useEffect(() => {
     (async function fetchExpenses() {
-      const response = await fetch(`http://localhost:3001/expense/${page}`, {
+      const response = await fetch(`http://35.78.181.44:3001/expense/${page}`, {
         method: "POST",
         body: JSON.stringify({
           itemPerPage: perPage || localStorage.getItem("perPage"),
@@ -74,7 +74,7 @@ const Expenses = () => {
 
       (async function postExpense() {
         const response = await fetch(
-          `http://localhost:3001/expense/add-expense`,
+          `http://35.78.181.44:3001/expense/add-expense`,
           {
             method: "POST",
             body: JSON.stringify({

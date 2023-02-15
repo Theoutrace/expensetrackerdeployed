@@ -11,7 +11,7 @@ const SingleExpense = (props) => {
 
   const deleteExpenseItem = async () => {
     const expenseId = props.item.id;
-    await fetch(`http://localhost:3001/expense/${expenseId}`, {
+    await fetch(`http://35.78.181.44:3001/expense/${expenseId}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

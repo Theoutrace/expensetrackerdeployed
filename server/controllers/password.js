@@ -26,7 +26,7 @@ exports.postForgotPassword = async (req, res, next) => {
         from: "prakashkumar.imw@gmail.com",
         subject: "Password reset",
         text: "Reset your password",
-        html: `<a href="http://localhost:3000/password/resetpassword/${id}" >Click here to reset</a>`,
+        html: `<a href="http://35.78.181.44:3000/password/resetpassword/${id}" >Click here to reset</a>`,
       };
 
       SendGrid.send(msg)

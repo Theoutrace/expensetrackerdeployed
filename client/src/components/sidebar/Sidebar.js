@@ -19,10 +19,13 @@ const Sidebar = () => {
   const token = localStorage.getItem("token");
   useEffect(() => {
     (async function fetchLeaderboard() {
-      const response = await fetch(`http://localhost:3001/user/leaderboard`, {
-        method: "GET",
-        headers: { "Content-Type": "application/json", Authorization: token },
-      });
+      const response = await fetch(
+        `http://35.78.181.44:3001/user/leaderboard`,
+        {
+          method: "GET",
+          headers: { "Content-Type": "application/json", Authorization: token },
+        }
+      );
       const res = await response.json();
       dispatch(ExpenseActions.addLeaderboard(res.data));
     })();
@@ -36,7 +39,7 @@ const Sidebar = () => {
   const downloadExpenseReportHandler = async () => {
     const token = localStorage.getItem("token");
     const response = await fetch(
-      `http://localhost:3001/expense/download-expenses`,
+      `http://35.78.181.44:3001/expense/download-expenses`,
       {
         method: "GET",
         headers: { "Content-Type": "application/json", Authorization: token },

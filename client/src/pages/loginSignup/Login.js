@@ -23,7 +23,7 @@ const Login = (props) => {
 
     (async function loginHandler() {
       try {
-        const response = await fetch(`http://localhost:3001/user/login`, {
+        const response = await fetch(`http://35.78.181.44:3001/user/login`, {
           method: "POST",
           body: JSON.stringify({
             email: Obj.email,

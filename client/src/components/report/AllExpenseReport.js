@@ -12,7 +12,7 @@ const AllExpenseReport = () => {
     (async function fetchData() {
       const token = localStorage.getItem("token");
       const response = await fetch(
-        `http://localhost:3001/expense/download-expenses/allurl`,
+        `http://35.78.181.44:3001/expense/download-expenses/allurl`,
         {
           method: "GET",
           headers: { "Content-Type": "application/json", Authorization: token },
