@@ -1,0 +1,48 @@
+@import "../../scss/variables.scss";
+
+.pagination-component-container {
+  //   background-color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+
+    li {
+      //   background-color: aquamarine;
+      border: 1px solid grey;
+      padding: $margin-1;
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 1px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .currentPage-container-pageno {
+      background-color: $clr-secondary;
+      color: $clr-cl-min;
+    }
+
+    .next-li-btn {
+      background-color: $clr-primary;
+      color: $clr-cl-min;
+      border-radius: 20px;
+      width: 80px;
+      &:hover {
+        background-color: $clr-dark;
+      }
+    }
+  }
+}

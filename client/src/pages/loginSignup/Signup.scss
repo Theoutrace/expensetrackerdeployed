@@ -1,0 +1,128 @@
+@import "../../scss/variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Aleo:wght@400;700&family=Caveat:wght@400;500;600&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.signup-form-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  .signup-form-container-2 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+    font-family: Caveat;
+
+    .pass-cls-for-pos {
+      position: absolute;
+      z-index: 2;
+      transform: rotate(-30deg);
+      left: -180px;
+      bottom: 50px;
+      color: $clr-primary;
+      font-size: 20px;
+      span {
+        color: $clr-secondary;
+        font-size: 35px;
+        margin: 5px;
+      }
+    }
+
+    .email-cls-for-pos {
+      position: absolute;
+      z-index: 2;
+      transform: rotate(40deg);
+      right: -150px;
+      bottom: 180px;
+      color: $clr-primary;
+      font-size: 20px;
+
+      span {
+        color: $clr-secondary;
+        font-size: 35px;
+        font-weight: 600;
+      }
+    }
+
+    .line-curve-deco {
+      position: absolute;
+      width: 100px;
+      z-index: 1;
+      right: -10px;
+      top: 170px;
+      transform: rotate(220deg);
+    }
+
+    .line-curve-deco2 {
+      position: absolute;
+      width: 150px;
+      z-index: 1;
+      bottom: 0px;
+      left: -58px;
+      transform: rotate(190deg);
+    }
+  }
+
+  form {
+    background-color: $clr-secondary;
+    width: 300px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: $margin-1;
+    border-radius: $size-2;
+    position: relative;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+      rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    h2 {
+      color: $clr-cl-min;
+      font-family: poppins;
+      font-weight: 300;
+    }
+
+    input {
+      height: 25px;
+      margin: $size-2;
+      border: 0px;
+      border-radius: $size-1;
+      padding: $size-3;
+    }
+    button {
+      height: 50px;
+      border-radius: $size-1;
+      border: 0px;
+      margin: 2px;
+      margin-top: $margin-2;
+      font-size: 18px;
+      background-color: $clr-secondary-low;
+
+      &:hover {
+        background-color: $clr-dark;
+        color: $clr-cl-min;
+        cursor: pointer;
+        transform: scale(1.08);
+        border-radius: 0px;
+      }
+    }
+  }
+
+  .toggle-text-cntnr {
+    font-family: poppins;
+    padding: $margin-1;
+    position: relative;
+    z-index: 2;
+
+    span {
+      color: $clr-secondary;
+      border-bottom: 2px solid rgba(128, 128, 128, 0);
+      &:hover {
+        border-bottom: 2px solid $clr-secondary;
+        cursor: pointer;
+      }
+    }
+  }
+}

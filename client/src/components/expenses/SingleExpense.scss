@@ -1,0 +1,103 @@
+@import "../../scss/variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Aleo:wght@400;700&family=Caveat:wght@400;500;600&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.single-expense-container-aft-submit {
+  background-color: lighten($clr-dark, 10%);
+  width: 25%;
+  height: 200px;
+  border-radius: $margin-1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin: 20px;
+  padding-bottom: 30px;
+  transform: rotate(-5deg);
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  transition: transform 300ms;
+  transition-timing-function: ease-in-out;
+
+  &:hover {
+    transform: rotate(0deg);
+    transform: scale(1.2);
+    z-index: 3;
+  }
+
+  button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding: 0px;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0);
+    border: 0px;
+    img {
+      height: 20px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .item-category-cont {
+    font-size: 18px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+    border-radius: $margin-1 $margin-1 0px 0px;
+
+    h3 {
+      margin-left: $margin-1;
+      color: $clr-secondary;
+    }
+  }
+
+  .item-amt-cont {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    p {
+      margin: 0px;
+      font-size: 18px;
+      margin: 10px;
+      color: $clr-primary;
+    }
+
+    h4 {
+      margin: 0px;
+      margin: 5px;
+      color: $clr-cl-min;
+      width: 90%;
+      text-align: right;
+      margin-right: $margin-1;
+    }
+  }
+
+  .item-DESC-cont {
+    width: 90%;
+    margin-top: 20px;
+    p {
+      margin: 0px;
+      margin-left: $margin-1;
+      font: 30px;
+      text-align: left;
+      color: $clr-primary;
+    }
+
+    h6 {
+      font-size: 20px;
+      font-weight: 400;
+      margin: 0px;
+      text-align: left;
+      margin-left: $margin-1;
+      text-transform: capitalize;
+      color: $clr-cl-min;
+      margin-top: 5px;
+      width: 90%;
+    }
+  }
+}

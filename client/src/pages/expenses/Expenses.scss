@@ -1,0 +1,124 @@
+@import "../../scss/variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Aleo:wght@400;700&family=Caveat:wght@400;500;600&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.expense-page-container {
+  display: flex;
+  height: 100%;
+  // background-color: aquamarine;
+
+  .sidebar-component-container {
+    width: 20%;
+  }
+
+  .expense-page-comp-container {
+    width: 78%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .exp-pge-form-compone {
+      position: relative;
+      background-color: #f9f9f9;
+      width: 80%;
+      border-radius: $size-2;
+      display: flex;
+      justify-content: center;
+      padding: $margin-2;
+      margin: $margin-2 $margin-1;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+      input {
+        height: 30px;
+        width: 25%;
+        border-radius: $size-1;
+        border: 1px solid rgba(128, 128, 128, 0.418);
+        padding-left: 10px;
+        margin-right: $margin-1;
+      }
+
+      .category-cat-tag-select {
+        height: 34px;
+        width: 25%;
+        border-radius: $size-1;
+        margin-right: $margin-1;
+        border: 1px solid rgba(128, 128, 128, 0.418);
+        padding-left: 10px;
+      }
+
+      button {
+        width: 25%;
+        background-color: $clr-secondary;
+        border: 0px;
+        border-radius: $size-2;
+        color: $clr-cl-min;
+        font-size: 18px;
+        height: 34px;
+        &:hover {
+          cursor: pointer;
+          background-color: $clr-dark;
+        }
+      }
+    }
+
+    .exp-containr-outer {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      .cnt-pge-cntnr-exp {
+        // background-color: blueviolet;
+        display: flex;
+        width: 80%;
+        margin: $margin-1;
+        padding: $margin-2;
+        height: 500px;
+        justify-content: center;
+        position: relative;
+
+        .pagination-pannel {
+          position: absolute;
+          bottom: -50px;
+          // background-color: aquamarine;
+          width: 100%;
+          select {
+            height: 20px;
+            width: 80px;
+            border-radius: $size-2;
+            margin: $margin-1;
+          }
+        }
+        .all-exp-cntnr {
+          // background-color: aquamarine;
+          width: 90%;
+          justify-content: center;
+          display: flex;
+          flex-wrap: wrap;
+          padding: 10px;
+          position: absolute;
+          top: -20px;
+          overflow-y: scroll;
+          height: 500px;
+
+          .no-expense-case-container {
+            font-family: Caveat;
+            color: $clr-primary;
+
+            p {
+              font-family: poppins;
+            }
+            h2 {
+              font-size: 50px;
+              margin: 5px;
+            }
+            img {
+              object-fit: cover;
+              margin-top: -30px;
+              width: 250px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

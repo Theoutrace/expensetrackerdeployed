@@ -1,0 +1,23 @@
+@import "../../scss/variables.scss";
+
+.all-exp-report-container {
+  background-color: rgb(255, 255, 255);
+  width: 80%;
+  margin: $margin-1;
+  padding: $margin-2;
+
+  .inin-filename-container {
+    background-color: lighten($clr-secondary, 40%);
+    margin: $margin-1;
+    padding: $margin-1;
+    border-radius: $size-3;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+    &:hover {
+      background-color: $clr-primary;
+      cursor: pointer;
+      color: #f9f9f9;
+    }
+  }
+}
